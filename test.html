@@ -1,0 +1,17 @@
+<html>
+<body>
+   <h2>Changing the text of a label using JavaScript</h2>
+   <p id = "upper">The text of the below label element will be replaced by the text you enter in input bar once you click the button.</p>
+   <label id = "labelText">This is the initial text inside the label element.</label> <br>
+   <input type = "text" id = "inp"> <br> <br>
+   <button id = "btn" onclick = "changeText()">Click to change the Text</button>
+   <script>
+      var label = document.getElementById("labelText");
+      function changeText() {
+         var inp = document.getElementById("inp");
+         var enteredText = inp.value;
+         label.innerText = enteredText + ", is the new text of the label element that replaces the previous text, which is entered by you. ";
+      }
+   </script>
+</body>
+</html>
