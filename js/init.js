@@ -5,7 +5,7 @@ function initCopyright() {
 
     document.writeln("<!--Copyright-->");
     document.writeln("<div style=\"width: 100%;text-align: center;\">");
-    document.writeln("     <p class=\"copyright\">Copyright © 2022-"+syear+"&nbsp;<a target=\"_blank\" href=\"index.html\" style=\"color: white;font-size: 15px;\">山东省济南市章丘区第四中学高一六班</a>保留所有权利|鲁ICP备 NULL|<a target=\"_blank\" href=\"about.html\" style=\"color: white;font-size: 15px;\">关于</a></p>");
+    document.writeln("     <p class=\"copyright\">Copyright © "+syear+"&nbsp;<a target=\"_blank\" href=\"index.html\" style=\"color: white;font-size: 15px;\">山东省济南市章丘区第四中学高一六班</a>保留所有权利|鲁ICP备 NULL|<a target=\"_blank\" href=\"about.html\" style=\"color: white;font-size: 15px;\">关于</a></p>");
     document.writeln("</div>");
 }
 
