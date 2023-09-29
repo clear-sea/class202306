@@ -4,7 +4,7 @@
 
 ## 网址
 
-网址:[https://clear-sea.github.io/Class6-Website/](https://clear-sea.github.io/Class6-Website/)
+网址:[https://clear-sea.github.io/class202306/](https://clear-sea.github.io/class202306/)
 
 ## 说明
 
