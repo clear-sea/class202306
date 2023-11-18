@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>找不到页面</title>
         <link rel="icon" href="images/classIcon.png">
+        <script src="js/init.js"></script>
         <style>
             body {
                 background-color:black;
@@ -22,16 +23,19 @@
             }
             .button {
                 color:white;
-                font-size:20px;
+                font-size:40px;
                 text-align:center;
                 background-color:black;
                 transition:all 0.3s linear;
                 border-radius: 15px;
+                border:solid 3px;
+                border-color: white;
                 margin: auto;
                 width: 20%;
             }
             .button:hover {
-                background-color:rgb(71, 71, 71);
+                background-color:white;
+                color: black;
                 transition:all 0.3s linear;
             }
             .button:active {
@@ -39,6 +43,7 @@
             }
             a {
                 color: white;
+                text-decoration: none;
             }
             .copyright {
                 color: white;
@@ -64,8 +69,6 @@
         <div class="button">去主页看看</div>
         </a>
         <!--Copyright-->
-        <div style="background-color: black; width: 100%;">
-            <p class="copyright">Copyright © 2022-2023 <a target="_blank" href="https://lightbytecode.github.io/" style="color: white;font-size: 18px;background-color: black;">轻字节编程LightByteCode</a> 保留所有权利<br>鲁ICP备 114514(bushi</p>
-        </div>
+        <script>initCopyright();</script>
     </body>
 </html>
