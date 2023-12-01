@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "MC";        /*自定义字体名称*/
+    src:url("../font/Minecraft\ AE\(支持中文\).ttf");       /*字体包路径*/
+    font-weight: normal;
+    font-style: normal;
+}
+/*粗体*/
+@font-face {
+    font-family: "MCBold";        /*自定义字体名称*/
+    src:url("../font/3_Minecraft-Bold.otf");       /*字体包路径*/
+    font-weight: bold;
+    font-style: normal;
+}
+/*斜体*/
+@font-face {
+    font-family: "MCItalic";        /*自定义字体名称*/
+    src:url("../font/2_Minecraft-Italic.otf");       /*字体包路径*/
+    font-weight: normal;
+    font-style: italic;
+}
+/*粗体&斜体*/
+@font-face {
+    font-family: "MCItalicBold";        /*自定义字体名称*/
+    src:url("../font/2_Minecraft-Italic.otf");       /*字体包路径*/
+    font-weight: bold;
+    font-style: italic;
+}

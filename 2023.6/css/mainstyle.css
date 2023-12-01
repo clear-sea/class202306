@@ -1,0 +1,350 @@
+body {
+    background-image: url("../images/bg.png");
+    background-attachment:fixed;        /*当内容高度大于图片高度时，背景图像的位置相对于viewport固定*/
+    background-color:black; 
+    background-repeat:no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*导航栏样式*/
+.nav-bar {
+    background-image:linear-gradient(to bottom,rgb(53, 53, 53),rgba(0, 0, 0, 0));
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100px;
+    animation: nav_show 0.7s linear;
+    -moz-animation: nav_show 0.7s linear;
+    -o-animation: nav_show 0.7s linear;
+    -webkit-animation: nav_show 0.7s linear;
+}
+
+.nav-bar-btn {
+    /*导航栏上的按钮*/
+    height: auto;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0px;
+}
+/*Copyright*/
+.copyright {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family:"宋体";
+    font-size:18px;
+    height: 70px;
+    padding: 20px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    color:white;
+}
+
+p,li {
+    color: white;
+}
+/*链接*/
+a {
+    color:rgb(255, 255, 255);
+    transition: all 0.3s linear;
+}
+a:hover {
+    color: rgb(0, 140, 255);
+    transition: all 0.3s linear;
+}
+a:hover::after {
+    content: "»";
+}
+
+/*面板和子面板出现动画*/
+@keyframes panel-show {
+    0% {
+        top:300px;
+        opacity: 0;
+    }
+    100% {
+        top:0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes panel-show {
+    0% {
+        top:300px;
+        opacity: 0;
+    }
+    100% {
+        top:0px;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes panel-show {
+    0% {
+        top:300px;
+        opacity: 0;
+    }
+    100% {
+        top:0px;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes panel-show {
+    0% {
+        top:300px;
+        opacity: 0;
+    }
+    100% {
+        top:0px;
+        opacity: 1;
+    }
+}
+
+@keyframes nav_show {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: 100px;
+    }
+}
+@-moz-keyframes nav_show {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: 100px;
+    }
+}
+@-o-keyframes nav_show {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: 100px;
+    }
+}
+@-webkit-keyframes nav_show {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: 100px;
+    }
+}
+/*面板和子面板*/
+.panel {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.6);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+    animation: panel-show 1s ease-in-out;
+    -webkit-animation: panel-show 1s ease-in-out;
+    -moz-animation: panel-show 1s ease-in-out;
+    -o-animation: panel-show 1s ease-in-out;
+}
+
+.panel:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease-in-out;
+}
+
+.sub-panel {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border:solid 3px;
+    border-color:rgb(0, 70, 221);
+    width: 95%;
+    padding: 20px;
+    transition: all 0.2s linear;
+}
+
+.sub-panel:hover {
+    border-color: rgb(70, 166, 255);
+    transition: all 0.2s linear;
+}
+/*艺术字*/
+.art-text {
+    line-height: 10px;
+    text-shadow: 10px 10px 20px black;
+}
+/* 
+@media screen and (min-width:500px) and (min-height:100px) {
+    .art-text {
+        line-height: 10px;
+        text-shadow: 10px 10px 20px black;
+        font-size: 60px;
+    }
+} */
+/*注释*/
+.comment {
+    font-style: italic;
+    font-weight: 100;
+    color:rgb(179, 179, 179)
+}
+/*表格样式*/
+table {
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: white;
+    text-align: center;
+}
+
+table th {
+    border-right: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+table td {
+    border-right: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+/*选择文本样式*/
+*::selection {
+    background-color: rgb(175, 175, 175);
+}
+
+/*条目*/
+/*出现动画*/
+@keyframes show-items {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@-moz-keyframes show-items {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@-o-keyframes show-items {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes show-items {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/*left*/
+.items-block {
+    animation: show-items 1s ease-in-out;
+    -o-animation: show-items 1s ease-in-out;
+    -moz-animation: show-items 1s ease-in-out;
+    -webkit-animation: show-items 1s ease-in-out;
+}
+
+.items {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: solid 5px;
+    border-color: rgb(0, 153, 255);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.items-h2 {
+    margin-left: 10px;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.5s linear;
+}
+.items-h2::before,.items-h2::after {
+    content: "|";
+    color:rgb(0, 153, 255);
+    background-color: rgb(0, 153, 255);
+    transition: all 0.5s linear;
+}
+
+/* .items::before {
+    content: "";
+    display: block;
+    background-color: rgb(0, 153, 255);
+    width: 100%;
+    height:5px;
+}
+.items::after {
+    content: "";
+    display: block;
+    background-color: rgb(0, 153, 255);
+    width: 100%;
+    height:5px;
+} */
+/*悬停效果*/
+.items:hover  {
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.5s linear;
+}
+
+/*logo*/
+.logo {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/class-logo.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.names {
+    color: rgb(0, 162, 255);
+    line-height: 40px;
+}

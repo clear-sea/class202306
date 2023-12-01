@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width">
+        <title>八年级十五班</title>
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        <link rel="icon" href="images/class_logo.png">
+
+        <style>
+            .btn {
+                border-radius: 15px;
+                border: none;
+
+                color:rgb(0, 140, 255);
+                text-align: center;
+                font-size:50px;
+
+                width: 300px;
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+
+                transition: all 0.2s ease-in-out;
+                animation: show 1s linear;
+            }
+            .btn:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn:active {
+                background-color: skyblue;
+            }
+            
+            body {
+                width: 100%;
+                height:100%;
+                padding: 0px;
+                margin: 0px;
+                background-image: none;
+                background-color: black;
+            }
+
+            .background {
+                width: 100%;
+                height:100%;
+                position: fixed;
+                background-image: url(images/bg.png);
+                background-repeat:no-repeat;               
+                background-size: cover;
+
+                margin: 0px;
+                padding: 0px;
+
+                display:flex;
+                align-items:center;/*所有子元素都垂直居中了*/
+            }
+
+            @keyframes show {
+                0% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            a::after{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body id="main-body">
+        <div class="background">
+            <!--按钮-->
+            <div style="margin-left: auto;margin-right: auto;">
+                <a href="main.html" style="text-decoration: none;">
+                    <p class="btn">你好,十五»</p>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
