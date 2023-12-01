@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/bg.jpeg");
+    background-image: url("../images/bgClassroom.jpg");
     background-attachment:fixed;        /*当内容高度大于图片高度时，背景图像的位置相对于viewport固定*/
     background-color:black; 
     background-repeat:no-repeat;
@@ -13,6 +13,9 @@ body {
 
 /*导航栏样式*/
 .nav-bar {
+    position: fixed;
+    top:0px;
+    z-index:999;
     background-image:linear-gradient(to bottom,rgb(53, 53, 53),rgba(0, 0, 0, 0));
     color: rgb(255, 255, 255);
     width: 100%;
@@ -33,9 +36,27 @@ body {
     margin-right: 10px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h3,h4,h5,h6 {
     text-align: center;
     color:white;
+}
+/*面板标题*/
+h1 {
+    text-align: left;
+    color:white;
+    font-size: 70px;
+    font-weight: 80;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    margin-left: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 60;
+    color:rgba(255, 255, 255, 0.616);
 }
 
 p,li {
@@ -52,51 +73,27 @@ a:hover {
     transition: all 0.3s linear;
 }
 
-/*面板和子面板出现动画*/
+/*面板出现动画*/
 @keyframes panel-show {
-    0% {
-        top:300px;
-        opacity: 0;
-    }
-    100% {
-        top:0px;
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @-webkit-keyframes panel-show {
-    0% {
-        top:300px;
-        opacity: 0;
-    }
-    100% {
-        top:0px;
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @-moz-keyframes panel-show {
-    0% {
-        top:300px;
-        opacity: 0;
-    }
-    100% {
-        top:0px;
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @-o-keyframes panel-show {
-    0% {
-        top:300px;
-        opacity: 0;
-    }
-    100% {
-        top:0px;
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
-
+/*导航栏出现动画*/
 @keyframes nav_show {
     0% {
         opacity: 0;
@@ -137,18 +134,15 @@ a:hover {
         height: 100px;
     }
 }
-/*面板和子面板*/
+/*面板*/
 .panel {
     padding: 20px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter:blur(5px);
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    background-color: rgb(255, 153, 0);
+    background-repeat:no-repeat;background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    margin:0px;
+    margin-bottom: 50%;
     position: relative;
     transition: all 0.3s ease-in-out;
     animation: panel-show 1s ease-in-out;
@@ -158,31 +152,13 @@ a:hover {
 }
 
 .panel:hover {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgb(231, 170, 0);
     transition: all 0.3s ease-in-out;
 }
-
-.sub-panel {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border:solid 3px;
-    border-color:rgb(0, 70, 221);
-    width: 95%;
-    padding: 20px;
-    transition: all 0.2s linear;
-}
-
-.sub-panel:hover {
-    border-color: rgb(70, 166, 255);
-    transition: all 0.2s linear;
-}
-/*艺术字*/
-.art-text {
-    line-height: 10px;
-    text-shadow: 10px 10px 20px black;
+/*普通文本*/
+p {
+    font-size: 25px;
+    line-height: 40px;
 }
 /* 
 @media screen and (min-width:500px) and (min-height:100px) {
@@ -219,21 +195,6 @@ table td {
 /*选择文本样式*/
 *::selection {
     background-color: rgba(175, 175, 175,100);
-}
-
-
-.items-h2 {
-    margin-left: 10px;
-    margin-right: auto;
-    padding: 10px;
-    text-align: center;
-    transition: all 0.3s linear;
-}
-.items-h2::before,.items-h2::after {
-    content: "|";
-    color:rgb(0, 153, 255);
-    background-color: rgb(0, 153, 255);
-    transition: all 0.3s linear;
 }
 
 /*logo*/

@@ -37,5 +37,5 @@ function SD() {
 
 function show(){
     document.writeln("<p>本周"+SD()+"</p>");
-    document.writeln("<p>高考倒计时:"+countDownCEE()+"</p>");
+    document.writeln("<p>高考倒计时:"+countDownCEE()+"天</p>");
 }
