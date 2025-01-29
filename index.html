@@ -1,196 +1,138 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maxmum-scale=1.0">
-        
-        <title>高一六班</title>
-        <link rel="icon" href="images/classIcon.png">
-        <script src="js/changeStyle.js"></script>
-        <script src="js/init.js"></script>
-        <script>initCSS();</script>
-    </head>
-    <body id="panel-body" style="width: 100%;margin: 0px;padding: 0px;">
-        <!--导航栏-->
-        <div class="nav-bar">
-            <div style="display: inline-block;">
-                <div class="logo"></div>
-            </div>
-            <div style="display: inline-block;margin-right: 10px;">
-                <strong style="font-size: 25px;margin: 0px;">高一六班</strong>
-            </div>
-            <div class="nav-bar-btn" style="display: inline-block;">
-                <a target="_blank" href="dict.html" style="font-size: 20px;">班梗</a>
-            </div>
-            <div class="nav-bar-btn" style="display: inline-block;">
-                <a target="_blank" href="about.html" style="font-size: 20px;">关于</a>
-            </div>
-        </div>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高二五班</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="resource/icons/favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#about">关于</a></li>
+            <li><a href="#meme">班梗</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
 
-        <!--正文-->
-        <div class="panel" style="background-image: url(images/bg.jpeg);display: block;">
-            <div style="height:100px;"></div>
-            <h1 style="text-align: center;margin: auto;">高一六班</h1>
-            <h2>章丘四中高中部</h2>
-            <h1>我们的口号</h1>
-            <div align="center">
-                <!--动态打字-->
-                <svg xmlns='http://www.w3.org/2000/svg'
-                xmlns:xlink='http://www.w3.org/1999/xlink'
-                viewBox='0 0 400 50'
-                style='background-color: #00000000;'
-                width='400px' height='50px'>
-                            <path id='path0'>
-                                            <animate id='d0' attributeName='d' begin='0s;d1.end'
-                                dur='5000ms' fill='remove'
-                                values='m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0' keyTimes='0;0.8;0.8;1' />
-                                </path>
-                <text font-family='"monospace", monospace' fill='orange' font-size='20'
-                    dominant-baseline='auto'
-                    x='50%' text-anchor='middle'>
-                    <textPath xlink:href='#path0'>
-                        六班之志，势比天日，六班之魂，气震昆仑！
-                    </textPath>
-                </text>
-                    <path id='path1'>
-                                            <animate id='d1' attributeName='d' begin='d0.end'
-                                dur='5000ms' fill='remove'
-                                values='m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0' keyTimes='0;0.8;0.8;1' />
-                                </path>
-                <text font-family='"monospace", monospace' fill='orange' font-size='27'
-                    dominant-baseline='auto'
-                    x='50%' text-anchor='middle'>
-                    <textPath xlink:href='#path1'>
-                        我们是金光五星乐队！
-                    </textPath>
-                </text>
-                </svg>
+    <section id="hero" class="hero">
+        <div>
+            <h1>高二五班</h1>
+            <p>章丘四中高中部 & 直升班</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>口号</h2>
+            <div class="items-grid">
+                <div class="items-card" style="overflow: hidden;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 50" style="background-color: #00000000;" width="400px" height="50px">
+                        <path id="path0">
+                                        <animate id="d0" attributeName="d" begin="0s;d1.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                            </path>
+                    <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="20" dominant-baseline="auto" x="50%" text-anchor="middle">
+                        <textPath xlink:href="#path0">
+                            扬帆起航，五班最强，劈风斩浪，再创辉煌！
+                        </textPath>
+                    </text>
+                        <path id="path1">
+                                                <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                                    </path>
+                    <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="27" dominant-baseline="auto" x="50%" text-anchor="middle">
+                        <textPath xlink:href="#path1">
+                            我们是高二五班！
+                        </textPath>
+                    </text>
+                    </svg>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="panel">
-            <h1>共青团团员</h1>
-            <h2 style="font-size: 40px;">祝贺马添羽，马泽传，刘佳宁，李金泽，韩屹辰，王锡越，王泽萱几位同学成为共青团员！</h2>
-        </div>
-
-        <div class="panel" style="background-image: url(images/bg.jpeg);">
-            <h1>我们班的同学们...</h1>
-            <div style="column-count: 4;;">
-                <p class="names">
-                    赵欣怡<br>
-                    赵子瑜<br>
-                    刘佳宁<br>
-                    宁紫晨<br>
-                    李金泽<br>
-                    王浩袭<br>
-                    杨有旺<br>
-                    巩述畅<br>
-                    刘清硕<br>
-                    孙震远<br>
-                    柏文杰<br>
-                    魏一铭<br>
-                    马添羽<br>
-                    李鹏宇<br>
-                    杜修俊<br>
-                    王锡越<br>
-                    房玉阳<br>
-                    张高毅<br>
-                    高一然<br>
-                    靳先杰<br>
-                    窦奥博<br>
-                    韩瑞婷<br>
-                    李东德来<br>
-                    徐传玺<br>
-                    柴慧泽<br>
-                    韩屹宸<br>
-                    马泽传<br>
-                    宁文诚<br>
-                    冯秋实<br>
-                    王泽萱<br>
-                    张明皓<br>
-                    马紫凝<br>
-                    郑佳航<br>
-                    张宇彤<br>
-                    王嘉硕<br>
-                    苗露颖<br>
-                    胡婷玥<br>
-                    韩佳琪<br>
-                </p>
+    <section id="tool" class="section">
+        <div class="container">
+            <h2>工具</h2>
+            <div class="items-grid">
+                <div class="items-card">
+                    <h3>高考倒计时</h3>
+                    <script src="classTool.js"></script>
+                    <script>showCount()</script>
+                </div>
+                <div class="items-card">
+                    <h3>单双周</h3>
+                    <script>showSD()</script>
+                </div>
             </div>
-            <p class="comment">名字无排序规则</p>
         </div>
+    </section>
 
-        <div class="panel">
-            <h1>小工具</h1>
-            <script src="js/classTool.js"></script>
-            <script>show();</script>
+    <section id="meme" class="section">
+        <div class="container">
+            <h2>班梗</h2>
+            <div class="items-grid">
+                <div class="items-card">
+                    <h3>Example1</h3>
+                    <p>This is an example.</p>
+                </div>
+                <div class="items-card">
+                    <h3>Example2</h3>
+                    <p>This is an example.</p>
+                </div>
+                <div class="items-card">
+                    <h3>Example3</h3>
+                    <p>This is an example.</p>
+                </div>
+                <div class="items-card">
+                    <h3>Example4</h3>
+                    <p>This is an example.</p>
+                </div>
+                <div class="items-card">
+                    <h3>Example5</h3>
+                    <p>This is an example.</p>
+                </div>
+                <div class="items-card">
+                    <h3>Example6</h3>
+                    <p>This is an example.</p>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="panel" style="background-image: url(images/bgMC.png);">
-            <h1>金光五星乐队</h1>
-            <p>这本身也是一个梗罢（喜</p>
-            <span>
-                <img src="images/gold-five-stars.png" width="100px" height="100px" alt="金光五星乐队logo">
-            </span>
-            <table border="0px">
-                <tr>
-                    <th>主唱</th>
-                    <th>作词</th>
-                </tr>
-                <tr>
-                    <td>柴惠泽</td>
-                    <td>韩屹宸,房玉阳</td>
-                </tr>
-            </table>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>关于</h2>
+            <div class="items-grid">
+                <div class="items-card">
+                    <h3>清澈的海水</h3>
+                    <p>设计 & 前端</p>
+                    <p>GitHub主页：<a href="https://github.com/clear-sea">https://github.com/clear-sea</a></p>
+                </div>
+                <div class="items-card">
+                    <h3>关于本站</h3>
+                    <p>本站GitHub储存库:<a href="https://github.com/clear-sea/class202305/">https://github.com/clear-sea/class202305</a>，如果你有GitHub账号并且觉得不错，给颗star</p>
+                    <p>(注：GitHub Pages所建,所有网页手写)</p>
+                </div>
+                <div class="items-card">
+                    <h3>背景图片</h3>
+                    <p>震远 & 秋实</p>
+                    <p>GitHub主页：<a href="https://github.com/LightByteCodes/mc_image">mc图片储存库</a></p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="panel" style="background-image: url(images/bgZhiyin.webp);">
-            <h1>ikun专栏</h1>
-            <p>小杜大抵是是我们班唯一的真ikun</p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h1>联系</h1>
+            <div class="items-grid">
+                <div class="items-card"><h3><a href="mailto:18660775261@163.com">开发者邮箱:18660775261@163.com</a></h3></div>
+            </div>
         </div>
+    </section>
 
-        <div class="panel" style="background-image: url(images/wordcloud.png);">
-            <h1>词云</h1>
-        </div>
-
-        <div class="panel" style="margin-bottom: 0px;background-image: url(https://clear-sea.github.io/images/devBG.jpeg);">
-            <h1>关于</h1>
-            <p>如果你有<a href="www.github.com" target="_blank">Github</a>账户，可以去<a href="https://github.com/clear-sea/class202306/issues/1" target="_blank">GitHub Isuses评论区</a>留言</p>
-            <p>如果没有，你可以去<a href="www.github.com" target="_blank">Github</a>注册</p>
-
-                <h2>关于我们</h2>
-                    <p>冯秋实 <a href="https://github.com/LightByteCodes" target="_blank">Github主页</a></p>
-                    <p></p>
-                    <p>刘清硕 <a href="https://github.com/clear-sea" target="_blank">Github主页</a></p>
-    
-                
-                    <p>设计：冯秋实,刘清硕</p> 
-                
-                    <p>前端：刘清硕</p>
-                    <p class="comment">注：没有后端</p>
-                
-                    <p>感谢全班同学的支持</p>
-    
-                <h2>关于本站</h2>
-                <p>本站所建目的为介绍和此后纪念本班</p>
-                <p>本站GitHub储存库:<a href="https://github.com/clear-sea/Class6-Website" target="_blank">https://github.com/clear-sea/Class-Website</a>，如果你有GitHub账号并且觉得不错，给颗star</p>
-                <p class="comment">注：GitHub Pages所建,所有网页手写</p>
-                <br>
-                <p>欢迎提出建议!</p>
-                <p>如果你有GitHub账号，可以在<a href="https://github.com/clear-sea/Class6-Website/issues/2" target="_blank">储存库的"Issues"评论区</a>中提建议</p>
-                <p>你也可以在开发者的邮箱上发邮件提建议：
-                    <li>
-                        <address style="color:white;">18660775261@163.com</address>
-                    </li>
-                </p>
-                <br>
-                <p>评论区：<a href="https://github.com/clear-sea/Class6-Website/issues/1" target="_blank">GitHub Isuses评论区</a></p>
-    
-                <h2>背景图片</h2>
-                <p>背景MC图片：孙震远,冯秋实</p>
-                <a href="https://github.com/LightByteCodes/mc_image" target="_blank">MC背景图片的GitHub储存库——MC_image</a>
-
-            <script>initCopyright();</script>
-        </div>
-
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
