@@ -6,7 +6,7 @@
 }
 
 a {
-    color:black;
+    color:rgb(0, 72, 131);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -77,6 +77,9 @@ body {
 /* 内容区块 */
 .section {
     padding: 5rem 2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -103,6 +106,12 @@ body {
 .items-card:hover {
     box-shadow: 0 5px 12px rgba(0,0,0,0.15);
     transform: translateY(-5px);
+}
+
+.card-image {
+    width: 80%;
+    height: auto;
+    margin-top: 1rem;
 }
 
 /* 响应式设计 */

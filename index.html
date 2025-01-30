@@ -6,6 +6,7 @@
     <title>高二五班</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="resource/icons/favicon.png">
+    <script src="script.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -22,6 +23,14 @@
             <p>章丘四中高中部 & 直升班</p>
         </div>
     </section>
+    <!--set script-->
+    <script>
+        const backgroundBody=document.getElementById("hero");
+        // 点击更换
+        backgroundBody.addEventListener('click',changeBackground);
+        // 定时更换
+        setInterval(changeBackground,4000);
+    </script>
 
     <section class="section">
         <div class="container">
@@ -57,7 +66,6 @@
             <div class="items-grid">
                 <div class="items-card">
                     <h3>高考倒计时</h3>
-                    <script src="classTool.js"></script>
                     <script>showCount()</script>
                 </div>
                 <div class="items-card">
@@ -73,30 +81,64 @@
             <h2>班梗</h2>
             <div class="items-grid">
                 <div class="items-card">
-                    <h3>Example1</h3>
-                    <p>This is an example.</p>
+                    <h3>经典电摇</h3>
+                    <p>经典动作，无需多言</p>
+                    <img src="resource/imgs/meme1.png" class="card-image">
                 </div>
                 <div class="items-card">
-                    <h3>Example2</h3>
-                    <p>This is an example.</p>
+                    <h3>卷王ong</h3>
+                    <p>卷王+ong~卷就行</p>
+                    <img src="resource/imgs/meme2.png" class="card-image">
                 </div>
                 <div class="items-card">
-                    <h3>Example3</h3>
-                    <p>This is an example.</p>
+                    <h3>森林冰火人</h3>
+                    <p>红绿蓝🔴🟢🔵</p>
+                    <img src="resource/imgs/meme3.png" class="card-image">
                 </div>
                 <div class="items-card">
-                    <h3>Example4</h3>
-                    <p>This is an example.</p>
+                    <h3>**炸了</h3>
+                    <p>不太文明，但挺魔性</p>
+                    <img src="resource/imgs/meme4.png" class="card-image">
                 </div>
                 <div class="items-card">
-                    <h3>Example5</h3>
-                    <p>This is an example.</p>
+                    <h3>馍馍</h3>
+                    <p>某人の奇妙外号</p>
+                    <img src="resource/imgs/meme5.png" class="card-image">
                 </div>
                 <div class="items-card">
-                    <h3>Example6</h3>
-                    <p>This is an example.</p>
+                    <h3>6sinα-cosΩ=3β</h3>
+                    <p>声情并茂</p>
+                    <img src="resource/imgs/meme6.png" class="card-image">
                 </div>
-
+                <div class="items-card">
+                    <h3>"111" & "大家不要学渠子言"</h3>
+                    <img src="resource/imgs/meme7.png" class="card-image">
+                </div>
+                <div class="items-card">
+                    <h3>点燃kzk</h3>
+                    <p>活字乱刷术</p>
+                    <img src="resource/imgs/meme8.png" class="card-image">
+                </div>
+                <div class="items-card">
+                    <h3>房玉阳</h3>
+                    <p>双手翻飞，气势十足</p>
+                    <img src="resource/imgs/meme9.png" class="card-image">
+                </div>
+                <div class="items-card">
+                    <h3>宁文诚砍树</h3>
+                    <p>保护环境，人人有责</p>
+                    <img src="resource/imgs/meme10.png" class="card-image">
+                </div>
+                <div class="items-card">
+                    <h3>小学生</h3>
+                    <p>重拾回忆，重现童真</p>
+                    <img src="resource/imgs/meme11.png" class="card-image">
+                </div>
+                <div class="items-card">
+                    <h3>《咏粉笔》</h3>
+                    <p>纯洁无暇，一身清白</p>
+                    <img src="resource/imgs/meme12.png" class="card-image">
+                </div>
             </div>
         </div>
     </section>
@@ -113,12 +155,21 @@
                 <div class="items-card">
                     <h3>关于本站</h3>
                     <p>本站GitHub储存库:<a href="https://github.com/clear-sea/class202305/">https://github.com/clear-sea/class202305</a>，如果你有GitHub账号并且觉得不错，给颗star</p>
-                    <p>(注：GitHub Pages所建,所有网页手写)</p>
+                    
                 </div>
                 <div class="items-card">
                     <h3>背景图片</h3>
                     <p>震远 & 秋实</p>
                     <p>GitHub主页：<a href="https://github.com/LightByteCodes/mc_image">mc图片储存库</a></p>
+                </div>
+                <div class="items-card">
+                    <h3>技术支持</h3>
+                    <p>GitHub Pages & DeepSeek</p>
+                </div>
+                <div class="items-card" style="text-align: left;">
+                    <h3>2024五班热梗合集支持</h3>
+                    <p><b>热梗收集&主演团队：</b>张修绮 颜诺宜 王梓鑫 阚志焜 渠子言 宁文诚 房玉阳</p>
+                    <p><b>友谊出演：</b>杨有旺 韩屹宸 马鸿运 李东德来 六组全体 杨奕晨 张高毅</p>
                 </div>
             </div>
         </div>
@@ -128,7 +179,10 @@
         <div class="container">
             <h1>联系</h1>
             <div class="items-grid">
-                <div class="items-card"><h3><a href="mailto:18660775261@163.com">开发者邮箱:18660775261@163.com</a></h3></div>
+                <div class="items-card">
+                    <h3><a href="mailto:18660775261@163.com">开发者邮箱:18660775261@163.com</a></h3>
+                    <script>writeCopyright()</script>
+                </div>
             </div>
         </div>
     </section>
