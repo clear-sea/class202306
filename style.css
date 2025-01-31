@@ -5,13 +5,33 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* 深浅色模式*/
+:root {
+    /*默认深色*/
+    --card-bgcolor:#252525;
+    --card-color:rgb(234, 234, 234);
+    --shadow-color:rgba(0,0,0,1);
+    background-color: #181818;
+    --link-color:rgb(131, 216, 255);
+    --link-hover-color:rgb(0, 166, 255);
+}
+/* 浅色模式 */
+[data-theme="light"] {
+    --card-bgcolor:#ececec;
+    --card-color:black;
+    --shadow-color:rgba(0,0,0,0.15);
+    background-color: white;
+    --link-color:rgb(0, 72, 131);
+    --link-hover-color:#00a6ff;
+}
+
 a {
-    color:rgb(0, 72, 131);
+    color:var(--link-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 a:hover {
-    color: #00a6ff;
+    color: var(--link-hover-color);
 }
 
 body {
@@ -77,6 +97,7 @@ body {
 /* 内容区块 */
 .section {
     padding: 5rem 2rem;
+    color: var(--card-color);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -96,7 +117,7 @@ body {
 }
 
 .items-card {
-    background: #f8f9fa;
+    background: var(--card-bgcolor);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
@@ -104,7 +125,7 @@ body {
 }
 
 .items-card:hover {
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 12px var(--shadow-color);
     transform: translateY(-5px);
 }
 
@@ -112,6 +133,25 @@ body {
     width: 80%;
     height: auto;
     margin-top: 1rem;
+}
+/*切换按钮*/
+#theme-toggle {
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0.2rem;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#theme-toggle:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 0.35rem;
+}
+/*移动设备字样*/
+#normal-text {
+    visibility: hidden;
+    color: #0080ff;
+    height: 0;
 }
 
 /* 响应式设计 */
@@ -122,5 +162,13 @@ body {
     
     .hero h1 {
         font-size: 2.5rem;
+    }
+    #typing-text {
+        visibility: hidden;
+        height: 0;
+    }
+    #normal-text {
+        visibility: visible;
+        height: auto;
     }
 }

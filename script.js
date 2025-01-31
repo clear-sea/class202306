@@ -1,5 +1,4 @@
 /* 更换背景图片相关 */
-
 const backgroundImages=[
     "resource/imgs/bg1.png",
     "resource/imgs/bg2.png",
@@ -67,4 +66,20 @@ function writeCopyright(){
     syear=new String(year);
     document.writeln("<!--Copyright-->");
     document.writeln("<p>Copyright © 2022-"+syear+"&nbsp<a href=\'clear-sea.github.io\'>清澈的海水</a>&nbsp鲁ICP备 114514&nbsp|&nbsp<a href=\'#about\' class=\"link\">关于</a></p>");
+}
+
+/* 切换模式相关 */
+function changeStyle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    // 获取当前模式
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    // 切换模式
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.textContent="浅色☀️";
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent="深色🌙";
+    }
 }

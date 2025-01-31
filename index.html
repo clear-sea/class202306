@@ -11,11 +11,18 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
+            <li id="theme-toggle">浅色☀️</li>
             <li><a href="#about">关于</a></li>
             <li><a href="#meme">班梗</a></li>
             <li><a href="#contact">联系</a></li>
         </ul>
     </nav>
+    <script>
+        // 获取切换按钮
+        const themeToggle = document.getElementById('theme-toggle');
+        // 监听按钮点击事件
+        themeToggle.addEventListener('click',changeStyle);
+    </script>
 
     <section id="hero" class="hero">
         <div>
@@ -37,24 +44,27 @@
             <h2>口号</h2>
             <div class="items-grid">
                 <div class="items-card" style="overflow: hidden;">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 50" style="background-color: #00000000;" width="400px" height="50px">
+                    <!--打字特效相关svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 50" style="background-color: #00000000;" width="400px" height="50px" id="typing-text">
                         <path id="path0">
-                                        <animate id="d0" attributeName="d" begin="0s;d1.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
-                            </path>
-                    <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="20" dominant-baseline="auto" x="50%" text-anchor="middle">
-                        <textPath xlink:href="#path0">
-                            扬帆起航，五班最强，劈风斩浪，再创辉煌！
-                        </textPath>
-                    </text>
+                            <animate id="d0" attributeName="d" begin="0s;d1.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                        </path>
+                        <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="20" dominant-baseline="auto" x="50%" text-anchor="middle">
+                            <textPath xlink:href="#path0">
+                                扬帆起航，五班最强，劈风斩浪，再创辉煌！
+                            </textPath>
+                        </text>
                         <path id="path1">
-                                                <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
-                                    </path>
-                    <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="27" dominant-baseline="auto" x="50%" text-anchor="middle">
-                        <textPath xlink:href="#path1">
-                            我们是高二五班！
-                        </textPath>
-                    </text>
+                                <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                        </path>
+                        <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="27" dominant-baseline="auto" x="50%" text-anchor="middle">
+                            <textPath xlink:href="#path1">
+                                我们是高二五班！
+                            </textPath>
+                        </text>
                     </svg>
+                    <!--移动设备显示普通字-->
+                    <h3 id="normal-text">扬帆起航，五班最强，劈风斩浪，再创辉煌！</h3>
                 </div>
             </div>
         </div>
@@ -186,7 +196,5 @@
             </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
