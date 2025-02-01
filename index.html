@@ -8,193 +8,196 @@
     <link rel="icon" type="image/png" href="resource/icons/favicon.png">
     <script src="script.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li id="theme-toggle">浅色☀️</li>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#meme">班梗</a></li>
-            <li><a href="#contact">联系</a></li>
-        </ul>
-    </nav>
-    <script>
-        // 获取切换按钮
-        const themeToggle = document.getElementById('theme-toggle');
-        // 监听按钮点击事件
-        themeToggle.addEventListener('click',changeStyle);
-    </script>
+<body id="body" onload="hideSpinner()">
+    <div id="loading-spinner"></div> 
+    <div id="body-block">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li id="theme-toggle">浅色☀️</li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#meme">班梗</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+        <script>
+            // 获取切换按钮
+            const themeToggle = document.getElementById('theme-toggle');
+            // 监听按钮点击事件
+            themeToggle.addEventListener('click',changeStyle);
+        </script>
 
-    <section id="hero" class="hero">
-        <div>
-            <h1>高二五班</h1>
-            <p>章丘四中高中部 & 直升班</p>
-        </div>
-    </section>
-    <!--set script-->
-    <script>
-        const backgroundBody=document.getElementById("hero");
-        // 点击更换
-        backgroundBody.addEventListener('click',changeBackground);
-        // 定时更换
-        setInterval(changeBackground,4000);
-    </script>
+        <section id="hero" class="hero">
+            <div>
+                <h1>高二五班</h1>
+                <p>章丘四中高中部 & 直升班</p>
+            </div>
+        </section>
+        <!--set script-->
+        <script>
+            const backgroundBody=document.getElementById("hero");
+            // 点击更换
+            backgroundBody.addEventListener('click',changeBackground);
+            // 定时更换
+            setInterval(changeBackground,4000);
+        </script>
 
-    <section class="section">
-        <div class="container">
-            <h2>口号</h2>
-            <div class="items-grid">
-                <div class="items-card" style="overflow: hidden;">
-                    <!--打字特效相关svg-->
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 50" style="background-color: #00000000;" width="400px" height="50px" id="typing-text">
-                        <path id="path0">
-                            <animate id="d0" attributeName="d" begin="0s;d1.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
-                        </path>
-                        <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="20" dominant-baseline="auto" x="50%" text-anchor="middle">
-                            <textPath xlink:href="#path0">
-                                扬帆起航，五班最强，劈风斩浪，再创辉煌！
-                            </textPath>
-                        </text>
-                        <path id="path1">
-                                <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
-                        </path>
-                        <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="27" dominant-baseline="auto" x="50%" text-anchor="middle">
-                            <textPath xlink:href="#path1">
-                                我们是高二五班！
-                            </textPath>
-                        </text>
-                    </svg>
-                    <!--移动设备显示普通字-->
-                    <h3 id="normal-text">扬帆起航，五班最强，劈风斩浪，再创辉煌！</h3>
+        <section class="section">
+            <div class="container">
+                <h2>口号</h2>
+                <div class="items-grid">
+                    <div class="items-card" style="overflow: hidden;">
+                        <!--打字特效相关svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 50" style="background-color: #00000000;" width="400px" height="50px" id="typing-text">
+                            <path id="path0">
+                                <animate id="d0" attributeName="d" begin="0s;d1.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                            </path>
+                            <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="20" dominant-baseline="auto" x="50%" text-anchor="middle">
+                                <textPath xlink:href="#path0">
+                                    扬帆起航，五班最强，劈风斩浪，再创辉煌！
+                                </textPath>
+                            </text>
+                            <path id="path1">
+                                    <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove" values="m0,25 h0 ; m0,25 h400 ; m0,25 h400 ; m0,25 h0" keyTimes="0;0.8;0.8;1"></animate>
+                            </path>
+                            <text font-family="&quot;monospace&quot;, monospace" fill="#0080ff" font-size="27" dominant-baseline="auto" x="50%" text-anchor="middle">
+                                <textPath xlink:href="#path1">
+                                    我们是高二五班！
+                                </textPath>
+                            </text>
+                        </svg>
+                        <!--移动设备显示普通字-->
+                        <h3 id="normal-text">扬帆起航，五班最强，劈风斩浪，再创辉煌！</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="tool" class="section">
-        <div class="container">
-            <h2>工具</h2>
-            <div class="items-grid">
-                <div class="items-card">
-                    <h3>高考倒计时</h3>
-                    <script>showCount()</script>
-                </div>
-                <div class="items-card">
-                    <h3>单双周</h3>
-                    <script>showSD()</script>
+        <section id="tool" class="section">
+            <div class="container">
+                <h2>工具</h2>
+                <div class="items-grid">
+                    <div class="items-card">
+                        <h3>高考倒计时</h3>
+                        <script>showCount()</script>
+                    </div>
+                    <div class="items-card">
+                        <h3>单双周</h3>
+                        <script>showSD()</script>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="meme" class="section">
-        <div class="container">
-            <h2>班梗</h2>
-            <div class="items-grid">
-                <div class="items-card">
-                    <h3>经典电摇</h3>
-                    <p>经典动作，无需多言</p>
-                    <img src="resource/imgs/meme1.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>卷王ong</h3>
-                    <p>卷王+ong~卷就行</p>
-                    <img src="resource/imgs/meme2.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>森林冰火人</h3>
-                    <p>红绿蓝🔴🟢🔵</p>
-                    <img src="resource/imgs/meme3.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>**炸了</h3>
-                    <p>不太文明，但挺魔性</p>
-                    <img src="resource/imgs/meme4.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>馍馍</h3>
-                    <p>某人の奇妙外号</p>
-                    <img src="resource/imgs/meme5.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>6sinα-cosΩ=3β</h3>
-                    <p>声情并茂</p>
-                    <img src="resource/imgs/meme6.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>"111" & "大家不要学渠子言"</h3>
-                    <img src="resource/imgs/meme7.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>点燃kzk</h3>
-                    <p>活字乱刷术</p>
-                    <img src="resource/imgs/meme8.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>房玉阳</h3>
-                    <p>双手翻飞，气势十足</p>
-                    <img src="resource/imgs/meme9.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>宁文诚砍树</h3>
-                    <p>保护环境，人人有责</p>
-                    <img src="resource/imgs/meme10.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>小学生</h3>
-                    <p>重拾回忆，重现童真</p>
-                    <img src="resource/imgs/meme11.png" class="card-image">
-                </div>
-                <div class="items-card">
-                    <h3>《咏粉笔》</h3>
-                    <p>纯洁无暇，一身清白</p>
-                    <img src="resource/imgs/meme12.png" class="card-image">
+        <section id="meme" class="section">
+            <div class="container">
+                <h2>班梗</h2>
+                <div class="items-grid">
+                    <div class="items-card">
+                        <h3>经典电摇</h3>
+                        <p>经典动作，无需多言</p>
+                        <img src="resource/imgs/meme1.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>卷王ong</h3>
+                        <p>卷王+ong~卷就行</p>
+                        <img src="resource/imgs/meme2.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>森林冰火人</h3>
+                        <p>红绿蓝🔴🟢🔵</p>
+                        <img src="resource/imgs/meme3.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>**炸了</h3>
+                        <p>不太文明，但挺魔性</p>
+                        <img src="resource/imgs/meme4.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>馍馍</h3>
+                        <p>某人の奇妙外号</p>
+                        <img src="resource/imgs/meme5.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>6sinα-cosΩ=3β</h3>
+                        <p>声情并茂</p>
+                        <img src="resource/imgs/meme6.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>"111" & "大家不要学渠子言"</h3>
+                        <img src="resource/imgs/meme7.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>点燃kzk</h3>
+                        <p>活字乱刷术</p>
+                        <img src="resource/imgs/meme8.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>房玉阳</h3>
+                        <p>双手翻飞，气势十足</p>
+                        <img src="resource/imgs/meme9.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>宁文诚砍树</h3>
+                        <p>保护环境，人人有责</p>
+                        <img src="resource/imgs/meme10.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>小学生</h3>
+                        <p>重拾回忆，重现童真</p>
+                        <img src="resource/imgs/meme11.png" class="card-image">
+                    </div>
+                    <div class="items-card">
+                        <h3>《咏粉笔》</h3>
+                        <p>纯洁无暇，一身清白</p>
+                        <img src="resource/imgs/meme12.png" class="card-image">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>关于</h2>
-            <div class="items-grid">
-                <div class="items-card">
-                    <h3>清澈的海水</h3>
-                    <p>设计 & 前端</p>
-                    <p>GitHub主页：<a href="https://github.com/clear-sea">https://github.com/clear-sea</a></p>
-                </div>
-                <div class="items-card">
-                    <h3>关于本站</h3>
-                    <p>本站GitHub储存库:<a href="https://github.com/clear-sea/class202305/">https://github.com/clear-sea/class202305</a>，如果你有GitHub账号并且觉得不错，给颗star</p>
-                    
-                </div>
-                <div class="items-card">
-                    <h3>背景图片</h3>
-                    <p>震远 & 秋实</p>
-                    <p>GitHub主页：<a href="https://github.com/LightByteCodes/mc_image">mc图片储存库</a></p>
-                </div>
-                <div class="items-card">
-                    <h3>技术支持</h3>
-                    <p>GitHub Pages & DeepSeek</p>
-                </div>
-                <div class="items-card" style="text-align: left;">
-                    <h3>2024五班热梗合集支持</h3>
-                    <p><b>热梗收集&主演团队：</b>张修绮 颜诺宜 王梓鑫 阚志焜 渠子言 宁文诚 房玉阳</p>
-                    <p><b>友谊出演：</b>杨有旺 韩屹宸 马鸿运 李东德来 六组全体 杨奕晨 张高毅</p>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>关于</h2>
+                <div class="items-grid">
+                    <div class="items-card">
+                        <h3>清澈的海水</h3>
+                        <p>设计 & 前端</p>
+                        <p>GitHub主页：<a href="https://github.com/clear-sea">https://github.com/clear-sea</a></p>
+                    </div>
+                    <div class="items-card">
+                        <h3>关于本站</h3>
+                        <p>本站GitHub储存库:<a href="https://github.com/clear-sea/class202305/">https://github.com/clear-sea/class202305</a>，如果你有GitHub账号并且觉得不错，给颗star</p>
+                        
+                    </div>
+                    <div class="items-card">
+                        <h3>背景图片</h3>
+                        <p>震远 & 秋实</p>
+                        <p>GitHub主页：<a href="https://github.com/LightByteCodes/mc_image">mc图片储存库</a></p>
+                    </div>
+                    <div class="items-card">
+                        <h3>技术支持</h3>
+                        <p>GitHub Pages & DeepSeek</p>
+                    </div>
+                    <div class="items-card" style="text-align: left;">
+                        <h3>2024五班热梗合集支持</h3>
+                        <p><b>热梗收集&主演团队：</b>张修绮 颜诺宜 王梓鑫 阚志焜 渠子言 宁文诚 房玉阳</p>
+                        <p><b>友谊出演：</b>杨有旺 韩屹宸 马鸿运 李东德来 六组全体 杨奕晨 张高毅</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h1>联系</h1>
-            <div class="items-grid">
-                <div class="items-card">
-                    <h3><a href="mailto:18660775261@163.com">开发者邮箱:18660775261@163.com</a></h3>
-                    <script>writeCopyright()</script>
+        <section id="contact" class="section">
+            <div class="container">
+                <h1>联系</h1>
+                <div class="items-grid">
+                    <div class="items-card">
+                        <h3><a href="mailto:18660775261@163.com">开发者邮箱:18660775261@163.com</a></h3>
+                        <script>writeCopyright()</script>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 </html>

@@ -83,3 +83,11 @@ function changeStyle() {
         themeToggle.textContent="深色🌙";
     }
 }
+/* 加载动画相关 */
+function hideSpinner() {
+    const spinner = document.getElementById("loading-spinner");
+    const element = document.getElementById("body-block");
+    spinner.style.display = 'none';
+    element.style.display = 'block';
+    document.getElementById("body").style.position = 'relative';
+}
