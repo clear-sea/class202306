@@ -1,10 +1,10 @@
 /* 更换背景图片相关 */
 const backgroundImages=[
-    "resource/imgs/bg1.png",
-    "resource/imgs/bg2.png",
-    "resource/imgs/bg3.png",
-    "resource/imgs/bg4.png",
-    "resource/imgs/bg5.png"
+    "resource/imgs/bg1.jpg",
+    "resource/imgs/bg2.jpg",
+    "resource/imgs/bg3.jpg",
+    "resource/imgs/bg4.jpg",
+    "resource/imgs/bg5.jpg"
 ];
 
 // 随机选择
