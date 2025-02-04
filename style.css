@@ -11,7 +11,7 @@
     --card-bgcolor:#252525;
     --card-color:rgb(234, 234, 234);
     --shadow-color:rgba(0,0,0,1);
-    background: linear-gradient(to right,rgb(12, 12, 12),rgb(29, 29, 29),rgb(12,12,12));
+    --background: rgb(20,20,20);
     --link-color:rgb(131, 216, 255);
     --link-hover-color:rgb(0, 166, 255);
 }
@@ -20,7 +20,7 @@
     --card-bgcolor:#ececec;
     --card-color:black;
     --shadow-color:rgba(0,0,0,0.15);
-    background: rgb(248, 248, 248);
+    --background: rgb(248, 248, 248);
     --link-color:rgb(0, 72, 131);
     --link-hover-color:#00a6ff;
 }
@@ -40,6 +40,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
+    background-color: var(--background);
 }
 
 #body-block {
@@ -92,7 +93,7 @@ body {
     justify-content: center;
     text-align: center;
     background-color: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1));
-    background-image:url('resource/imgs/bg1.jpg');
+    background-image:url("resource/imgs/bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,7 +102,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -149,7 +150,9 @@ body {
 #theme-toggle {
     margin-left: 0;
     margin-right: auto;
-    padding: 0.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.1rem;
     color: white;
     transition: all 0.3s;
     cursor: pointer;
@@ -157,11 +160,6 @@ body {
 #theme-toggle:hover {
     background-color: rgba(50, 50, 50, 0.8);
     border-radius: 0.35rem;
-}
-/*移动设备字样*/
-#normal-text {
-    display: none;
-    color: #0080ff;
 }
 
 /* 响应式设计 */
@@ -172,12 +170,6 @@ body {
     
     .hero h1 {
         font-size: 2.5rem;
-    }
-    #typing-text {
-        display: none;
-    }
-    #normal-text {
-        display: block;
     }
 }
 
@@ -198,4 +190,18 @@ body {
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+#loading-img-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 800;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }

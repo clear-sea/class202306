@@ -1,18 +1,16 @@
-/* 更换背景图片相关 */
-const backgroundImages=[
-    "resource/imgs/bg1.jpg",
-    "resource/imgs/bg2.jpg",
-    "resource/imgs/bg3.jpg",
-    "resource/imgs/bg4.jpg",
-    "resource/imgs/bg5.jpg"
-];
-
-// 随机选择
-function changeBackground() {
-    const randomImage=backgroundImages[Math.floor(Math.random()*backgroundImages.length)];
-    backgroundBody.style.backgroundImage=`url('${randomImage}')`;
+/* 加载图片相关 */
+function loadImgs() {
+    for (let index = 1; index <= 12; index++) {
+        document.writeln(`<link rel="preload" href="resource/imgs/meme${index}.jpg" as="image">`)
+    }
+    const n = Math.floor(Math.random()*100);
+    if(n<=50){
+        return "https://bing.img.run/rand.php"
+    }
+    else{
+        return "resource/imgs/bg.jpg"
+    }
 }
-
 /* 单双周相关 */
 function getDaysBetween(startDay,endDay) {
     const sDay=Date.parse(startDay);
@@ -76,11 +74,11 @@ function changeStyle() {
     // 切换模式
     if (currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.textContent="浅色☀️";
+        themeToggle.textContent="☀️";
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
-        themeToggle.textContent="深色🌙";
+        themeToggle.textContent="🌙";
     }
 }
 /* 加载动画相关 */
@@ -90,4 +88,9 @@ function hideSpinner() {
     spinner.style.display = 'none';
     element.style.display = 'block';
     document.getElementById("body").style.position = 'relative';
+}
+
+function hideImgSpinner() {
+    const spinner = document.getElementById("loading-img-spinner");
+    spinner.style.display = 'none';
 }
