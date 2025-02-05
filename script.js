@@ -1,13 +1,7 @@
 /* 加载图片相关 */
-function loadImgs() {
-    for (let index = 1; index <= 12; index++) {
-        document.writeln(`<link rel="lazyload" href="resource/imgs/meme${index}.jpg" as="image">`)
-    }
-    for (let index = 1; index <= 3; index++) {
-        document.writeln(`<link rel="lazyload" href="resource/imgs/group${index}.jpeg" as="image">`)
-    }
-    document.writeln(`<link rel="preload" href="resource/imgs/bg.jpg" as="image">`)
-}
+/* function loadImgs() {
+    document.writeln(``)
+} */
 /* 单双周相关 */
 function getDaysBetween(startDay,endDay) {
     const sDay=Date.parse(startDay);
