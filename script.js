@@ -1,15 +1,9 @@
 /* 加载图片相关 */
 function loadImgs() {
     for (let index = 1; index <= 12; index++) {
-        document.writeln(`<link rel="preload" href="resource/imgs/meme${index}.jpg" as="image">`)
+        document.writeln(`<link rel="lazyload" href="resource/imgs/meme${index}.jpg" as="image">`)
     }
-    const n = Math.floor(Math.random()*100);
-    if(n<=50){
-        return "https://bing.img.run/rand.php"
-    }
-    else{
-        return "resource/imgs/bg.jpg"
-    }
+    document.writeln(`<link rel="preload" href="resource/imgs/bg.jpg" as="image">`)
 }
 /* 单双周相关 */
 function getDaysBetween(startDay,endDay) {
@@ -75,10 +69,12 @@ function changeStyle() {
     if (currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
         themeToggle.textContent="☀️";
+        themeToggle.title="切换为浅色模式"
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
         themeToggle.textContent="🌙";
+        themeToggle.title="切换为深色模式"
     }
 }
 /* 加载动画相关 */
@@ -93,4 +89,28 @@ function hideSpinner() {
 function hideImgSpinner() {
     const spinner = document.getElementById("loading-img-spinner");
     spinner.style.display = 'none';
+}
+/* 滑动页面相关 */
+// 防抖函数
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        if (timeout) {
+            clearTimeout(timeout);
+        }
+        timeout = setTimeout(() => {
+            func.apply(context, args);
+        }, wait);
+    };
+}
+// 具体功能
+function onScroll() {
+    // 获取页面滚动的垂直距离
+    let scrollY = window.scrollY || window.pageYOffset;
+    let rate=(heroElement.offsetHeight-scrollY)/heroElement.offsetHeight;
+    if(rate>=0){
+        textElement.style.opacity=rate;
+        heroElement.style.filter=`blur(${7*(1-rate)}px)`;
+    }
 }

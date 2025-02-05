@@ -9,14 +9,14 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="resource/icons/favicon.png">
         <!--预加载-->
-        <script>let img=loadImgs();</script>
+        <script>loadImgs();</script>
     </head>
     <body id="body" onload="hideSpinner()">
         <div id="loading-spinner"></div> 
         <div id="body-block">
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li id="theme-toggle">☀️</li>
+                    <li id="theme-toggle" title="切换为浅色模式">☀️</li>
                     <li><a href="#about">关于</a></li>
                     <li><a href="#meme">班梗</a></li>
                     <li><a href="#contact">联系</a></li>
@@ -31,32 +31,30 @@
 
             <section id="hero" class="hero">
                 <div>
-                    <h1>高二五班</h1>
-                    <p>章丘四中高中部 & 直升班</p>
+                    <h1 id="hero-title">高二五班</h1>
+                    <span id="typing-text"></span>
+                    <!--打字特效相关-->
+                    <script src="typed.js"></script>
+                    <script>
+                        var typed = new Typed("#typing-text", {
+                            strings: ["扬帆起航，五班最强，劈风斩浪，再创辉煌！", "我们是高二五班！","章丘四中高中部 & 直升班"],//输出的文字
+                            typeSpeed: 100,//打字的速度
+                            backSpeed:40,
+                            loop:true,
+                        });
+                    </script>
                 </div>
             </section>
             <script>
-                document.getElementById("hero").style.backgroundImage=`url(${img})`
+                // 滚动效果
+                const textElement=document.getElementById("hero-title");
+                const heroElement=document.getElementById("hero");
+                /* // 使用防抖函数包装，设置等待时间为 30ms
+                const debouncedScroll = debounce(onScroll, 30);
+                // 监听页面滚动事件
+                window.addEventListener('scroll', debouncedScroll); */
+                window.addEventListener('scroll',onScroll);
             </script>
-
-            <section class="section">
-                <div class="container">
-                    <h2>口号</h2>
-                    <div class="items-grid">
-                        <div class="items-card" style="overflow: hidden;"><span id="typing-text" style="font-size: 1.3rem;"></span></div>
-                        <!--打字特效相关-->
-                        <script src="typed.js"></script>
-                        <script>
-                            var typed = new Typed("#typing-text", {
-                                strings: ["扬帆起航，五班最强，劈风斩浪，再创辉煌！", "我们是高二五班！"],//输出的文字
-                                typeSpeed: 100,//打字的速度
-                                backSpeed:40,
-                                loop:true,
-                            });
-                        </script>
-                    </div>
-                </div>
-            </section>
 
             <section id="tool" class="section">
                 <div class="container">
@@ -89,22 +87,22 @@
                             <img src="resource/imgs/meme2.jpg" class="card-image" alt="卷王ong">
                         </div>
                         <div class="items-card">
-                            <h3></h3>
+                            <h3>森林冰火人</h3>
                             <p>红绿蓝🔴🟢🔵</p>
                             <img src="resource/imgs/meme3.jpg" class="card-image" alt="森林冰火人">
                         </div>
                         <div class="items-card">
-                            <h3></h3>
+                            <h3>**炸了</h3>
                             <p>不太文明，但挺魔性</p>
                             <img src="resource/imgs/meme4.jpg" class="card-image" alt="**炸了">
                         </div>
                         <div class="items-card">
-                            <h3></h3>
+                            <h3>馍馍</h3>
                             <p>某人の奇妙外号</p>
                             <img src="resource/imgs/meme5.jpg" class="card-image" alt="馍馍">
                         </div>
                         <div class="items-card">
-                            <h3></h3>
+                            <h3>6sinα-cosΩ=3β</h3>
                             <p>声情并茂</p>
                             <img src="resource/imgs/meme6.jpg" class="card-image" alt="6sinα-cosΩ=3β">
                         </div>
@@ -163,7 +161,7 @@
                         <div class="items-card">
                             <h3>技术支持</h3>
                             <p>
-                                <a href="https://pages.github.com/">GitHub Pages</a> & <a href="https://www.deepseek.com">DeepSeek</a> & <a href="https://github.com/mattboldt/typed.js/">typed.js</a> & <a href="https://bing.img.run/api.html">Bing API</a>
+                                <a href="https://pages.github.com/">GitHub Pages</a> & <a href="https://www.deepseek.com">DeepSeek</a> & <a href="https://github.com/mattboldt/typed.js/">typed.js</a>
                             </p>
                         </div>
                         <div class="items-card" style="text-align: left;">
@@ -173,7 +171,7 @@
                         </div>
                         <div class="items-card">
                             <h3>更新日期</h3>
-                            <p>2025.2.4</p>
+                            <p>2025.2.5</p>
                         </div>
                     </div>
                 </div>
