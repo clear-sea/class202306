@@ -12,7 +12,11 @@
         <link rel="preload" href="resource/imgs/bg.jpg" as="image">
     </head>
     <body id="body" onload="hideSpinner()">
-        <div id="loading-spinner"></div> 
+        <!--loading animation-->
+        <div id="loading-spinner-root">
+            <div class="ball" style="background-color: #0099ff;top: 0;"></div>
+            <div class="ball" style="background-color: #ffae00;bottom: 0;"></div>
+        </div> 
         <div id="body-block">
             <nav class="navbar">
                 <ul class="nav-links">
@@ -38,7 +42,7 @@
                     <script src="typed.js"></script>
                     <script>
                         var typed = new Typed("#typing-text", {
-                            strings: ["扬帆起航，五班最强，劈风斩浪，再创辉煌！", "我们是高二五班！","章丘四中高中部 & 直升班"],//输出的文字
+                            strings: ["<b>扬帆起航，五班最强，劈风斩浪，再创辉煌！</b>", "<b>我们是高二五班！</b>","<b>章丘四中高中部·直升班</b>"],//输出的文字
                             typeSpeed: 100,//打字的速度
                             backSpeed:40,
                             loop:true,
@@ -60,7 +64,7 @@
             <section id="photo" class="section">
                 <div class="container">
                     <h2>相册</h2>
-                    <div class="items-grid" style="grid-template-columns: repeat(2,45%)">
+                    <div class="items-grid" style="grid-template-columns: repeat(2,minmax(46%,50%));">
                         <div class="items-card">
                             <img src="resource/imgs/group1.jpeg" class="card-image" loading="lazy">
                         </div>
@@ -72,6 +76,12 @@
                         </div>
                         <div class="items-card">
                             <img src="resource/imgs/bg.jpg" class="card-image" loading="lazy">
+                        </div>
+                        <div class="items-card">
+                            <img class="card-image" loading="lazy" src="resource/imgs/group4.jpeg">
+                        </div>
+                        <div class="items-card">
+                            <img src="resource/imgs/group5.jpeg" class="card-image" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -197,7 +207,7 @@
                         </div>
                         <div class="items-card">
                             <h3>更新日期</h3>
-                            <p>2025.2.5</p>
+                            <p>2025.2.12</p>
                         </div>
                     </div>
                 </div>

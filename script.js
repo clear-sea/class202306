@@ -76,11 +76,15 @@ function changeStyle() {
 }
 /* 加载动画相关 */
 function hideSpinner() {
-    const spinner = document.getElementById("loading-spinner");
+    const spinner = document.getElementById("loading-spinner-root");
     const element = document.getElementById("body-block");
-    spinner.style.display = 'none';
-    element.style.display = 'block';
-    document.getElementById("body").style.position = 'relative';
+    spinner.style.animationName = 'fade';
+    setTimeout(function() {
+        // 更改样式以隐藏加载动画
+        spinner.style.display = 'none';
+        element.style.display = 'block';
+        document.getElementById("body").style.position = 'relative';
+    },1300);
 }
 
 function hideImgSpinner() {
@@ -108,6 +112,6 @@ function onScroll() {
     let rate=(heroElement.offsetHeight-scrollY)/heroElement.offsetHeight;
     if(rate>=0){
         textElement.style.opacity=rate;
-        heroElement.style.filter=`blur(${7*(1-rate)}px)`;
+        heroElement.style.filter=`blur(${10*(1-rate)}px)`;
     }
 }
