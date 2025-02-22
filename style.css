@@ -116,6 +116,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    animation: content-float 0.3s ease-out;
 }
 
 .container {
@@ -198,4 +199,14 @@ body {
 }
 @keyframes fade {
     100% { transform: scale(20);opacity: 0;}
+}
+@keyframes content-float {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

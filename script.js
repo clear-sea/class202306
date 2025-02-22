@@ -24,7 +24,7 @@ function countDownCEE(){
 function SD() {
     //judge single week and double week
     //"True" means single week and "False" means double week
-    const startDay="2023-10-23"; // 单周起始日
+    const startDay="2025-2-13"; // 单周起始日
     days=getDaysBetween(startDay,Date(Date.now()));
     if (days<=7){
         return "单周";
@@ -54,7 +54,7 @@ function writeCopyright(){
     year=date.getFullYear();
     syear=new String(year);
     document.writeln("<!--Copyright-->");
-    document.writeln("<p>Copyright © 2022-"+syear+"&nbsp<a href=\'clear-sea.github.io\'>清澈的海水</a>&nbsp鲁ICP备 114514&nbsp|&nbsp<a href=\'#about\' class=\"link\">关于</a></p>");
+    document.writeln("<p>Copyright © 2022-"+syear+"&nbsp<a href=\'https://clear-sea.github.io\'>清澈的海水</a>&nbsp鲁ICP备 114514&nbsp|&nbsp<a href=\'#about\' class=\"link\">关于</a></p>");
 }
 
 /* 切换模式相关 */
@@ -85,11 +85,6 @@ function hideSpinner() {
         element.style.display = 'block';
         document.getElementById("body").style.position = 'relative';
     },1300);
-}
-
-function hideImgSpinner() {
-    const spinner = document.getElementById("loading-img-spinner");
-    spinner.style.display = 'none';
 }
 /* 滑动页面相关 */
 // 防抖函数
